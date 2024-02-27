@@ -1,0 +1,5 @@
+{
+  "entryPoints": [ "./src/*.ts" ],
+  "out": "./docs",
+  "name": "Practica 6 - Leandro Armas"
+}
