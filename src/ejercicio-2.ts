@@ -1,12 +1,36 @@
+/**
+ * Clase que representa una factura.
+ */
 class Factura {
+  /**
+   * Crea una instancia de Factura.
+   * @param numeroFactura El número de la factura.
+   * @param cliente El nombre del cliente.
+   * @param total El total de la factura.
+   * @param fecha La fecha de la factura.
+   */
   constructor(public numeroFactura: string, public cliente: string, public total: number, public fecha: Date) {}
 }
 
+/**
+ * Interfaz para el generador de facturas.
+ */
 interface GeneradorFacturas {
+  /**
+   * Genera una factura.
+   * @param factura La factura a generar.
+   */
   generarFactura(factura: Factura): void;
 }
 
+/**
+ * Clase que implementa la interfaz GeneradorFacturas y genera facturas en formato PDF.
+ */
 class GeneradorPDF implements GeneradorFacturas {
+  /**
+   * Genera una factura en formato PDF.
+   * @param factura La factura a generar.
+   */
   generarFactura(factura: Factura): void {
     console.log("===========================================");
     console.log("              Factura PDF                  ");
@@ -14,12 +38,19 @@ class GeneradorPDF implements GeneradorFacturas {
     console.log("Nº de factura: ", factura.numeroFactura);
     console.log("Fecha: ", factura.fecha);
     console.log("Cliente: ", factura.cliente);
-    console.log("Total: ", factura.total), " euros";
+    console.log("Total: ", factura.total, " euros");
     console.log("===========================================");
   }
 }
 
+/**
+ * Clase que implementa la interfaz GeneradorFacturas y genera facturas en formato HTML.
+ */
 class GeneradorHTML implements GeneradorFacturas {
+  /**
+   * Genera una factura en formato HTML.
+   * @param factura La factura a generar.
+   */
   generarFactura(factura: Factura): void {
     console.log(`<html>`);
     console.log(`  <head>`);
@@ -36,6 +67,7 @@ class GeneradorHTML implements GeneradorFacturas {
   }
 }
 
+// Ejemplo de uso
 const date = new Date(2024, 1, 28);
 const factura = new Factura("ES001", "Leandro", 459.66, date);
 const generadorPDF = new GeneradorPDF();
