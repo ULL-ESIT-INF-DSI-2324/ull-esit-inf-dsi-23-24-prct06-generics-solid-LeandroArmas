@@ -3,7 +3,7 @@ import * as fs from 'fs';
 /**
  * Clase FileReader que se encarga de leer un archivo.
  */
-class FileReader {
+export class FileReader {
   /**
    * Crea una instancia de FileReader.
    * @param filePath La ruta del archivo a leer.
@@ -28,7 +28,7 @@ class FileReader {
 /**
  * Clase FileWriter que se encarga de escribir en un archivo.
  */
-class FileWriter {
+export class FileWriter {
   /**
    * Crea una instancia de FileWriter.
    * @param filePath La ruta del archivo en el que se escribirá.

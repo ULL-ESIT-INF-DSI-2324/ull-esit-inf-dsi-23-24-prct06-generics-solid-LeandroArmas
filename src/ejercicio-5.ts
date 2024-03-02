@@ -12,7 +12,7 @@ interface NotificationService {
 /**
  * Clase que permite enviar notificaciones por correo electrónico.
  */
-class EmailService implements NotificationService {
+export class EmailService implements NotificationService {
   /**
    * Notifica un mensaje por correo electrónico.
    * @param message El mensaje a notificar.
@@ -25,7 +25,7 @@ class EmailService implements NotificationService {
 /**
  * Clase que permite enviar notificaciones por SMS.
  */
-class ShortMessageService implements NotificationService {
+export class ShortMessageService implements NotificationService {
   /**
    * Notifica un mensaje por SMS.
    * @param message El mensaje a notificar.
@@ -38,7 +38,7 @@ class ShortMessageService implements NotificationService {
 /**
  * Clase que utiliza diferentes tipos de servicios para realizar notificaciones.
  */
-class Notifier {
+export class Notifier {
   /**
    * Crea una instancia de Notifier.
    * @param notificationService El servicio de notificación a utilizar.

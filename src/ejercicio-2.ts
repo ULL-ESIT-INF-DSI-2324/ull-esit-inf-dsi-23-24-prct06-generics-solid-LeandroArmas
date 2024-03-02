@@ -1,7 +1,7 @@
 /**
  * Clase que representa una factura.
  */
-class Factura {
+export class Factura {
   /**
    * Crea una instancia de Factura.
    * @param numeroFactura El número de la factura.
@@ -26,7 +26,7 @@ interface GeneradorFacturas {
 /**
  * Clase que implementa la interfaz GeneradorFacturas y genera facturas en formato PDF.
  */
-class GeneradorPDF implements GeneradorFacturas {
+export class GeneradorPDF implements GeneradorFacturas {
   /**
    * Genera una factura en formato PDF.
    * @param factura La factura a generar.
@@ -46,7 +46,7 @@ class GeneradorPDF implements GeneradorFacturas {
 /**
  * Clase que implementa la interfaz GeneradorFacturas y genera facturas en formato HTML.
  */
-class GeneradorHTML implements GeneradorFacturas {
+export class GeneradorHTML implements GeneradorFacturas {
   /**
    * Genera una factura en formato HTML.
    * @param factura La factura a generar.

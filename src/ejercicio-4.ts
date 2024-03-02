@@ -21,7 +21,7 @@ interface Scannable {
 /**
  * Clase que implementa la interfaz Printable e imprime.
  */
-class Printer implements Printable {
+export class Printer implements Printable {
   /**
    * Imprime.
    */
@@ -33,7 +33,7 @@ class Printer implements Printable {
 /**
  * Clase que implementa la interfaz Scannable y escanea.
  */
-class Scanner implements Scannable {
+export class Scanner implements Scannable {
   /**
    * Escanea.
    */
@@ -45,7 +45,7 @@ class Scanner implements Scannable {
 /**
  * Clase que implementa las interfaces Printable y Scannable e imprime y escanea.
  */
-class PrinterScanner implements Printable, Scannable {
+export class PrinterScanner implements Printable, Scannable {
   /**
    * Imprime.
    */

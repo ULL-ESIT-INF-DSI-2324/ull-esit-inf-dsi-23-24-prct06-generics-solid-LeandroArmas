@@ -1,7 +1,7 @@
 /**
  * Clase que representa un enser.
  */
-class Enser {
+export class Enser {
 	/**
 	 * Crea una instancia de Enser.
 	 * @param nombre El nombre del enser.
@@ -12,7 +12,7 @@ class Enser {
 /**
 * Clase que representa una caja que contiene enseres.
 */
-class Caja {
+export class Caja {
 	public enseres: Enser[];
 
 	/**
@@ -36,7 +36,7 @@ class Caja {
 /**
 * Clase para añadir un enser a una caja.
 */
-class AñadirEnserCaja{
+export class AñadirEnserCaja{
 	/**
 	 * Crea una instancia de AñadirEnserCaja.
 	 * @param caja La caja a la que se añadirá el enser.
@@ -55,7 +55,7 @@ class AñadirEnserCaja{
 /**
 * Clase para eliminar un enser de una caja.
 */
-class EliminarEnserCaja {
+export class EliminarEnserCaja {
 	/**
 	 * Crea una instancia de EliminarEnserCaja.
 	 * @param caja La caja de la que se eliminará el enser.
@@ -74,7 +74,7 @@ class EliminarEnserCaja {
 /**
 * Clase para buscar un enser en una caja.
 */
-class BuscarEnserCaja {
+export class BuscarEnserCaja {
 	/**
 	 * Crea una instancia de BuscarEnserCaja.
 	 * @param caja La caja en la que se buscará el enser.
