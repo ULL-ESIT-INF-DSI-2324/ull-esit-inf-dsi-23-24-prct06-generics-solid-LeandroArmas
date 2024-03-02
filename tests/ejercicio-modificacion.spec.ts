@@ -2,6 +2,7 @@ import { expect } from 'chai';
 import { Rational, Complex, AritmeticableCollection } from "../src/ejercicio-modificacion";
 
 describe('Rational test ', () => {
+    
     it('div', () => {
         const rational1 = new Rational(1, 2);
         const rational2 = new Rational(1, 4);
@@ -20,7 +21,15 @@ describe('Rational test ', () => {
 });
 
 describe('Complex test ', () => {
-    it('sum', () => {
+    it('add', () => {
+        const complex1 = new Complex(1, 2);
+        const complex2 = new Complex(2, 3);
+        const result = complex1.add(complex2);
+        expect(result.real).to.equal(3);
+        expect(result.imaginary).to.equal(5);
+    });
+
+    it('div', () => {
         const complex1 = new Complex(1, 2);
         const complex2 = new Complex(2, 3);
         const result = complex1.add(complex2);
