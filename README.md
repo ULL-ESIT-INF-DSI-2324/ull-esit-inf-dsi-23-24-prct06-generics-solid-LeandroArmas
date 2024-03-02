@@ -19,15 +19,15 @@ Esta práctica aborda la aplicación de los principios SOLID, clases e interface
 
 ## Ejercicio 1 - La mudanza
 
-Para llevar a cabo este ejercicio he creado una clase Enser, que representa los enseres por su nombre. 
+Para llevar a cabo este ejercicio he creado una clase `Enser`, que representa los enseres por su nombre. 
 
-A continuación, he creado una clase Caja con un método para listar los enseres que hay en la caja, y como queremos respetar los principios SOLID he procedido a crear tres clases para cada tipo de acción: añadir, eliminar y buscar, las cuales crean una instancia de una caja y realizan las correspondientes operaciones. 
+A continuación, he creado una clase `Caja` con un método para listar los enseres que hay en la caja, y como queremos respetar los principios SOLID he procedido a crear tres clases para cada tipo de acción: añadir, eliminar y buscar, las cuales crean una instancia de una caja y realizan las correspondientes operaciones. 
 
 ## Ejercicio 2 - Facturas en diferentes formatos
 
-Para realizar este ejercicio primeramente he creado una clase Factura que almacena los parámetros: númeroFactura, cliente, total y fecha. 
+Para realizar este ejercicio primeramente he creado una clase `Factura `que almacena los parámetros: númeroFactura, cliente, total y fecha. 
 
-A continuación, he procedido a crear una interfaz generadorFacturas con un método generarfacturas, el cual va a ser implemento luego con las clases generadorPDF y generadorHTML.
+A continuación, he procedido a crear una interfaz `generadorFacturas` con un método generarfacturas, el cual va a ser implemento luego con las clases `generadorPDF` y `generadorHTML`.
 
 Esto permite que en un futuro podamos añadir nuevos formatos de generación, sin necesidad de modificar el resto del código, es decir, nos estamos segurando de cumplir el principio Open-closed que se basa en poder extender las funcionalidades pero sin modificar el código. 
 
@@ -37,16 +37,16 @@ Este ejercicio que nos ha propuesto revisar el profesor incumple el primer princ
 
 Para ello, he propuesto una solución donde se divide la clase en dos clases más sencillas que solo tienen una única función: 
 
-- Una clase fileReader: que lee el contenido de un archivo.
-- Una clase fileWriter: que escribe datos en un archivo. 
+- Una clase `fileReader`: que lee el contenido de un archivo.
+- Una clase `fileWriter`: que escribe datos en un archivo. 
 
 ## Ejercicio 4 - Impresoras y escáneres
 
 En este ejercicio se puede ver cómo se incumple el cuarto principio SOLID (Interface segragation principle), ya que existe una interfaz que realiza dos funciones, lo cual nos obliga a tener implementaciones vacías en las demás clases. 
 
-Para ello he propuesto una solución donde se divide la interfaz PrintableScannable en dos interfaces más sencillas: 
-- Una interfaz Printable
-- Una interfaz Scannable
+Para ello he propuesto una solución donde se divide la interfaz `PrintableScannable` en dos interfaces más sencillas: 
+- Una interfaz `Printable`
+- Una interfaz `Scannable`
 
 De esta manera, las demás clases solo tienen que implementar su correspondiente interfaz o ambas cuando sea necesario. 
 
@@ -54,7 +54,7 @@ De esta manera, las demás clases solo tienen que implementar su correspondiente
 
 Por último, en este ejercicio vemos que se incumple el quinto principio SOLID (Dependency inversion principle) ya que las clases no están dependiendo de la abstracción sino de la praticularización. 
 
-Para solucionar este problema, he propuesto una solución donde se crea una interfaz notificationService la cual será implementada posteriormente por las clases EmailService y ShortMessageService. Así la clase Notifier puede instanciar ambos objetos instanciando nptificationService, basándose en la abstracción.
+Para solucionar este problema, he propuesto una solución donde se crea una interfaz notificationService la cual será implementada posteriormente por las clases `EmailService` y `ShortMessageService`. Así la clase `Notifier` puede instanciar ambos objetos instanciando `notificationService`, basándose en la abstracción.
 
 ## Conclusiones
 
